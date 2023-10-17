@@ -1,0 +1,3 @@
+﻿Make login
+IEntityTypeConfiguration
+Повторити Фіналізацію та деструктори, і IDisppsable
