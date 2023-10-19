@@ -1,7 +1,7 @@
 ﻿using AllInOneForum.DataAccess.Contracts.Interfaces;
 using System.ComponentModel.DataAnnotations;
 
-namespace AllInOneForum.DataAccess.Models
+namespace AllInOneForum.DataAccess.Contracts.Models
 {
     public class User : IEntity
     {
@@ -12,5 +12,7 @@ namespace AllInOneForum.DataAccess.Models
         public string Email { get; set; }
         [Required]
         public string PasswordHash { get; set; }
+        [Required]
+        public int RoleId { get; set; } 
     }
 }

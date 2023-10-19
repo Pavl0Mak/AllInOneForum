@@ -1,7 +1,8 @@
 ﻿using AllInOneForum.DataAccess.Contracts.Interfaces;
-using AllInOneForum.DataAccess.DataContext;
+using AllInOneForum.DataAccess.Contracts.DataContext;
 using AllInOneForum.DataAccess.Repo;
 using Microsoft.Extensions.DependencyInjection;
+using AllInOneForum.DataAccess.Contracts.UnitOfWork;
 
 namespace AllInOneForum.DataAccess
 {
@@ -11,6 +12,8 @@ namespace AllInOneForum.DataAccess
         {
             services.AddScoped<EntitiesDBContext>();
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+
             return services;
         }
     }

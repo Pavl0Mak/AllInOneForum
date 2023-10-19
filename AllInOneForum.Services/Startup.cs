@@ -9,7 +9,7 @@ namespace AllInOneForum.Services
     {
         public static IServiceCollection RegisterDataAccess(this IServiceCollection services)
         {
-            services.AddScoped<IUserServiceAsync, UserService>();
+            services.AddScoped<IUserService, UserService>();
             return services;
         }
     }

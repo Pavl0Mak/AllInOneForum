@@ -1,10 +1,10 @@
-﻿using AllInOneForum.DataAccess.Models;
+﻿using AllInOneForum.DataAccess.Contracts.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace AllInOneForum.DataAccess.Configurations
+namespace AllInOneForum.DataAccess.Contracts.Configurations
 {
-    internal class UserConfiguration : IEntityTypeConfiguration<User>
+    public class UserConfiguration : IEntityTypeConfiguration<User>
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {

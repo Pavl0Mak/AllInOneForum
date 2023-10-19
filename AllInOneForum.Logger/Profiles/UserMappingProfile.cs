@@ -1,5 +1,5 @@
 ﻿using AllInOneForum.Contracts.DTOs;
-using AllInOneForum.DataAccess.Models;
+using AllInOneForum.DataAccess.Contracts.Models;
 using AllInOneForum.Services.Contracts.Models;
 using AllInOneForum.Utils.Resolvers;
 using AutoMapper;
@@ -10,7 +10,8 @@ namespace AllInOneForum.Utils.Profiles
     {
         public UserMappingProfile()
         {
-            CreateMap<User, UserModel>();
+            CreateMap<User, UserModel>()
+                .ForMember(b => b.Role, c => c.MapFrom<UserToUserModelResolver>());
             CreateMap<UserModel, UserDTO>();
             CreateMap<UpSertUserDTO, UpSertUserModel>();
             CreateMap<UpSertUserModel, User>()

@@ -2,9 +2,9 @@
 
 namespace AllInOneForum.Services.Contracts.Interfaces
 {
-    public interface IUserServiceAsync
+    public interface IUserService
     {
-        public Task<IEnumerable<UserModel>> LoginUserAsync(UpSertUserModel user);
+        public Task<UserModel> LoginUserAsync(UpSertUserModel user);
         public Task<int?> RegisterUserAsync(UpSertUserModel user);
         public Task<IEnumerable<UserModel>> GetUsersAsync();
     }

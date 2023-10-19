@@ -1,4 +1,4 @@
-﻿using AllInOneForum.DataAccess.Models;
+﻿using AllInOneForum.DataAccess.Contracts.Models;
 using AllInOneForum.Services.Contracts.Models;
 using AutoMapper;
 

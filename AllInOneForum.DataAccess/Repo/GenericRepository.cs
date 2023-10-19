@@ -1,5 +1,5 @@
 ﻿using AllInOneForum.DataAccess.Contracts.Interfaces;
-using AllInOneForum.DataAccess.DataContext;
+using AllInOneForum.DataAccess.Contracts.DataContext;
 using Microsoft.EntityFrameworkCore;
 
 namespace AllInOneForum.DataAccess.Repo
@@ -18,7 +18,6 @@ namespace AllInOneForum.DataAccess.Repo
         public async Task<int?> AddAsync(T item)
         {
             await _dbset.AddAsync(item);
-            await _context.SaveChangesAsync();
 
             return item.Id;
         }
